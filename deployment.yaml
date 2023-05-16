@@ -10,6 +10,10 @@ spec:
       app: sample-app
   template:
     metadata:
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/agent-inject-secret-hello.txt: secret/hello
+        vault.hashicorp.com/role: app
       labels:
         app: sample-app
     spec:
